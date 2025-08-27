@@ -1,0 +1,70 @@
+Section 1: Setting Up Git and Visual Studio Code
+1. Download Git by visiting the website:
+https://git-scm.com/downloads/win
+2. Download Visual Studio Code by visiting the website:
+https://code.visualstudio.com/
+3. After downloading Git, open Command Prompt and type the command:
+git --version
+This checks if Git has been installed successfully.
+4. Open Visual Studio Code. Click on File and create a new folder repository named Git_repo.
+
+5. In Visual Studio Code, right-click below your folder in the Explorer and select Open in
+Integrated Terminal. This terminal works like the Command Prompt.
+6. Check the Git version in the Integrated Terminal by typing:
+git --version
+7. Configure Git with your username and email in the Integrated Terminal:
+git config --global user.name &quot;Your_Name&quot;
+git config --global user.email &quot;Your_Email&quot;
+8. Press q to exit any interactive mode if prompted.
+
+
+
+Section 2: Initializing a Git Repository
+9. Initialize a Git repository by typing:
+git init
+10. Use the command below to list all hidden directories (which track your files):
+ls -Force
+
+
+Section 3: Creating and Versioning Files
+11. In Visual Studio Code, create a file by clicking the + sign in the folder you created.
+12. Name the file index.html.
+13. Add some starter code to index.html by typing:
+html:5 and hitting Enter.
+14. Mark this file as Version 1 by committing it to Git. Follow these steps:
+a. Check the status of your repository: git status
+b. Adding file index.html as following command: git add index.html
+c. Commit the changes with a message:
+git commit -m &quot;Initial commit: Version 1&quot;
+15. Verify the commit by checking the log: git log
+
+
+
+Section 4: Creating and Tracking New Versions
+16. Update the index.html file by changing the body to:
+&lt;h1&gt;This is version 2&lt;/h1&gt;
+17. Check the status of your repository:
+git status
+18. Check changes side-by-side in Visual Studio Code by clicking View -&gt; Source Control.
+19. Add the changes to the staging area:
+git add index.html
+20. Commit the changes with a message:
+git commit -m &quot;This is Version 2&quot;
+21. Verify the commit by checking the log again:
+git log
+22. Repeat steps to create Version 3, updating the h1 tag in the file to:
+&lt;h1&gt;This is version 3&lt;/h1&gt;
+
+
+
+Section 5: Viewing and Reverting to Previous
+Versions
+24. To view the content of a previous commit, find the commit ID using:
+git log
+25. Use the commit ID to display specific content:
+git show &lt;commit_id&gt;:index.html
+26. To restore the entire file from a previous version, use:
+git checkout &lt;commit_id&gt; -- index.html
+
+27. To return to the latest version, type:
+git checkout master -- index.html
